@@ -1,7 +1,7 @@
 # Angular Testing Library - Config
 
 
-## Setup Angualar Testing Library - jest-dom
+## Setup Angular Testing Library - jest-dom
 
 * **https://testing-library.com/docs/angular-testing-library/intro/**
 * **https://testing-library.com/docs/ecosystem-jest-dom**

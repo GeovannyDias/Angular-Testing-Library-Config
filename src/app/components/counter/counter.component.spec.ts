@@ -2,11 +2,13 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CounterComponent } from './counter.component';
 
 import { render, screen, fireEvent } from '@testing-library/angular';
+import { By } from '@angular/platform-browser';
 
 
 describe('CounterComponent', () => {
   let component: CounterComponent;
   let fixture: ComponentFixture<CounterComponent>;
+  let compiled: HTMLElement;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -17,11 +19,20 @@ describe('CounterComponent', () => {
     fixture = TestBed.createComponent(CounterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
+    compiled = fixture.nativeElement;
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('Should content Current Count: 5', () => {
+    component.counter = 5;
+    fixture.detectChanges();
+    const span= compiled.querySelector('span');
+    expect(span?.innerHTML).toContain('Current Count: 5');
+  });
+
 });
 
 

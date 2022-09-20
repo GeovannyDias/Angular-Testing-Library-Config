@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CounterComponent } from './counter.component';
 
 import { render, screen, fireEvent } from '@testing-library/angular';
-import { By } from '@angular/platform-browser';
 
 
 describe('CounterComponent', () => {
